@@ -26,7 +26,10 @@ public:
     {
         return 0.5 * a * t;
     }
-    
+    int hitung(PersegiPanjang p)
+    {
+        return p.panjang;
+    }
 };
 
 int main()
