@@ -8,7 +8,11 @@ class PersegiPanjang
 {
 
 public:
-   
+    int panjang, lebar;
+    int luasPersegiPanjang(int b, int a)
+    {
+        return a * b;
+    }
 };
 
 int main()
