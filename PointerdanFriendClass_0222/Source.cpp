@@ -1,25 +1,18 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
-class mahasiswa {
+class mahasiswa
+{
+private:
+    string nama;
+
 public:
-    int nim;
-    void shownim()
-    {
-        cout << "nomor induk :" << nim << endl;
-    }
+    friend void setNama(mahasiswa& a, string);
 };
 
-int main() {
-    mahasiswa mhs(1); //Object mhs
-    mhs.shownim(); //Member Accsess Operator
-
-    mahasiswa &refmhs = mhs; //Pointer Reference refMhs
-    refmhs.nim = 2; //Member Access Operator
-    mhs.shownim();
-
-    mahasiswa* pmhs = &mhs; //Pointer Dereference pMhs
-    pmhs->nim = 3; //Arrow Pointer
-    pmhs->shownim();
-    return 0;
+void setNama(mahasiswa& a, string b)
+{
+    a.nama = b;
+    cout << a.nama
 }
